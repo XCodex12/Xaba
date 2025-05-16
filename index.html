@@ -383,7 +383,7 @@
               <span>2023 till now</span>
 
               <p class="timeline-text">
-                I'm still a final year student at Durban University of Technology. I study Application development.
+                I'm a final year student at Durban University of Technology. I study Application development.
               </p>
 
             </li>
@@ -392,7 +392,7 @@
 
               <h4 class="h4 timeline-item-title">Cisco</h4>
 
-              <span>March 11, 2023 — Sep 11, 2023</span>
+              <span>March 11, 2023</span>
 
               <p class="timeline-text">
                 Certified Packet Tracer User.
@@ -404,7 +404,7 @@
 
               <h4 class="h4 timeline-item-title">Cisco</h4>
 
-              <span>March 05, 2023 — Sep 20, 2023</span>
+              <span>March 05, 2023</span>
 
               <p class="timeline-text">
                 Certified NDG Linux Unhatched user.
@@ -416,7 +416,7 @@
 
               <h4 class="h4 timeline-item-title">Cisco</h4>
 
-              <span>March 05, 2023 — Sep 20, 2023</span>
+              <span>March 05, 2023</span>
 
               <p class="timeline-text">
                 Certified Cyber Security Expert.
@@ -428,19 +428,18 @@
 
               <h4 class="h4 timeline-item-title">Cisco</h4>
 
-              <span>March 05, 2023 — Sep 20, 2023</span>
+              <span>March 05, 2023</span>
 
               <p class="timeline-text">
                 Certificate for Mobile Digital Literacy.
               </p>
 
             </li>
-
           </ol>
-
         </section>
 
-        
+        <button><p class="title"><a href="./assets/CV/Siyanda Xaba's Curriculum vitae.pdf" download="My_CV.pdf">Simply click here to see pdf version of my cv</a></p></button>
+      </br>
 
         <section class="skill">
 
@@ -745,6 +744,87 @@
   -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+<!-- Existing full site HTML preserved -->
+<!-- Appending chatbot UI and logic only -->
+
+<script>
+  // Chatbot toggle button
+  const botButton = document.createElement('button');
+  botButton.id = 'chatbot-btn';
+  botButton.textContent = '💬';
+  Object.assign(botButton.style, {
+    position: 'fixed', bottom: '20px', right: '20px', zIndex: 9999,
+    border: 'none', borderRadius: '50%', width: '60px', height: '60px',
+    fontSize: '24px', cursor: 'pointer', backgroundColor: '#000', color: '#ffd700',
+    boxShadow: '0 4px 12px rgba(0,0,0,0.2)', transition: 'background 0.3s ease'
+  });
+  document.body.appendChild(botButton);
+
+  const botWindow = document.createElement('div');
+  botWindow.id = 'chatbot-window';
+  Object.assign(botWindow.style, {
+    display: 'none', position: 'fixed', bottom: '90px', right: '20px', zIndex: 9999,
+    width: '300px', maxHeight: '400px', backgroundColor: '#000', color: '#ffd700',
+    borderRadius: '10px', boxShadow: '0 0 15px rgba(0,0,0,0.2)', overflow: 'hidden',
+    fontFamily: 'Poppins, sans-serif', fontSize: '14px'
+  });
+  botWindow.innerHTML = `
+    <div style=\"background:#ffd700;color:#000;padding:10px;font-weight:bold;text-align:center\">Ask Siyanda's Bot</div>
+    <div id=\"chatbot-messages\" style=\"padding:10px; max-height:250px; overflow-y:auto\">
+      <div><strong>Bot:</strong> Hi! I'm Siyanda’s personal bot. Ask me about my skills, education, or contact info.</div>
+    </div>
+    <div style=\"display:flex;border-top:1px solid #444\">
+      <input id=\"chatbot-input\" type=\"text\" placeholder=\"Ask something...\" style=\"flex:1;padding:10px;border:none;background:#222;color:#ffd700\">
+      <button onclick=\"sendBotMessage()\" style=\"padding:10px;background:#ffd700;color:#000;border:none\">➤</button>
+    </div>`;
+  document.body.appendChild(botWindow);
+
+  botButton.onclick = () => {
+    botWindow.style.display = botWindow.style.display === 'none' ? 'block' : 'none';
+  };
+
+  const chatbotData = {
+    name: "Siyanda Xaba",
+    email: "siyandaxaba1@gmail.com",
+    phone: "0664428931",
+    location: "Durban, South Africa",
+    education: "Application Development at Durban University of Technology",
+    skills: ["Web Development", "App Development", "Cyber Security", "IT Technician", "Packet Tracer", "Troubleshooting"],
+    languages: ["English (Fluent)", "Zulu (Fluent)"],
+    programming: ["C#", "Java", "JavaScript", "SQL", "HTML", "CSS", "Linux"]
+  };
+
+  function sendBotMessage() {
+    const input = document.getElementById('chatbot-input');
+    const userMsg = input.value.trim();
+    if (!userMsg) return;
+    const chatbox = document.getElementById('chatbot-messages');
+    const userDiv = document.createElement('div');
+    userDiv.innerHTML = `<strong>You:</strong> ${userMsg}`;
+    chatbox.appendChild(userDiv);
+    const reply = getBotReply(userMsg);
+    const botDiv = document.createElement('div');
+    botDiv.innerHTML = `<strong>Bot:</strong> ${reply}`;
+    chatbox.appendChild(botDiv);
+    input.value = '';
+    chatbox.scrollTop = chatbox.scrollHeight;
+  }
+
+  function getBotReply(msg) {
+    msg = msg.toLowerCase();
+    if (msg.includes('name')) return `My name is ${chatbotData.name}.`;
+    if (msg.includes('email')) return `You can email me at ${chatbotData.email}.`;
+    if (msg.includes('phone') || msg.includes('contact')) return `You can contact me at ${chatbotData.phone}.`;
+    if (msg.includes('location') || msg.includes('live')) return `I'm based in ${chatbotData.location}.`;
+    if (msg.includes('education') || msg.includes('study')) return `I study ${chatbotData.education}.`;
+    if (msg.includes('skills')) return `Here are my skills: ${chatbotData.skills.join(', ')}.`;
+    if (msg.includes('language')) return `I speak: ${chatbotData.languages.join(', ')}.`;
+    if (msg.includes('programming')) return `I program in: ${chatbotData.programming.join(', ')}.`;
+    return "Sorry, I don't know that yet. Try asking about my skills, education, or contact info.";
+  }
+</script>
+<!-- End chatbot UI -->
 
 </body>
 
