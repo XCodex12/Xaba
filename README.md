@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Siyanda Xaba's Portfolio</title>
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/Logo1.jpg" type="icon image">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!--
+    - #MAIN
+  -->
+
+  <main>
+
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img src="./assets/images/Myself.jpg" alt="Siyanda Xaba" width="90" class="avatar" id="avatarImage">
+      </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Richard hanrick">Siyanda Xaba</h1>
+
+          <p class="title">Web & App developer</p>
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+
+              <a href="mailto:siyandaxaba1@gmail.com" class="contact-link">siyandaxaba1@gmail.com</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+
+              <a href="tel:+27664428931" class="contact-link">0664428931</a>
+            </div>
+
+
+            
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+
+              <address>82 Diakonia Avenue, Durban</address>
+            </div>
+
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+
+          <li class="social-item">
+            <a href="https://www.facebook.com/syandaxabziin.xaba?mibextid=ZbWKwL" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://www.linkedin.com/in/siyanda-xaba-13a211273?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+          </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://www.instagram.com/xabziin6/profilecard/?igsh=bTBtaGZ3NGZ0NzNh" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </aside>
+
+
+
+
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <button class="navbar-link  active" data-nav-link>About</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Resume</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>projects</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Contact</button>
+          </li>
+          <script>
+            // Select the checkbox element
+            const checkbox = document.getElementById('theme-checkbox');
+        
+            // Function to toggle the theme
+            checkbox.addEventListener('change', () => {
+                // Toggle the 'light-theme' class on the body
+                document.body.classList.toggle('light-theme', checkbox.checked);
+                
+                // Save the theme preference in local storage
+                localStorage.setItem('theme', checkbox.checked ? 'light' : 'dark');
+            });
+        
+            // Load the theme from local storage on page load
+            window.addEventListener('load', () => {
+                // Get the stored theme preference
+                const theme = localStorage.getItem('theme');
+                
+                // Check if the stored theme is 'light'
+                if (theme === 'light') {
+                    checkbox.checked = true; // Set checkbox to checked
+                    document.body.classList.add('light-theme'); // Add light-theme class
+                } else {
+                    checkbox.checked = false; // Ensure checkbox is unchecked
+                    document.body.classList.remove('light-theme'); // Remove light-theme class
+                }
+            });
+        </script>
+
+        </ul>
+
+      </nav>
+
+
+
+
+
+      <!--
+        - #ABOUT
+      -->
+
+      <article class="about  active" data-page="about">
+
+        <header>
+          <h2 class="h2 article-title">About me</h2>
+        </header>
+
+        <section class="about-text">
+
+          <p>
+        <span id="typing-text"></span> 
+    </p>
+    <script src="script.js"></script>
+
+          <p>
+            I am from Durban, South Africa, a final year student at Durban University of Technology that's proficient in web development and application development. I enjoy turning complex problems into simple, beautiful, and intuitive designs.
+          </p>
+
+          <p>
+            My job is to build your website/application so that it is functional and user-friendly but at the same time attractive.
+            Moreover, I
+            add personal touch to your product and make sure that is eye-catching and easy to use. My aim is to bring
+            across your
+            message and identity in the most creative way.
+          </p>
+        </section>
+
+
+        <!--
+          - service
+        -->
+
+        <section class="service">
+
+          <h3 class="h3 service-title">What i'm doing</h3>
+
+          <ul class="service-list">
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-design.svg
+                " alt="design icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Web design</h4>
+
+                <p class="service-item-text">
+                  The most modern and high-quality design made at a professional level.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Web development</h4>
+
+                <p class="service-item-text">
+                  High-quality development of sites at the professional level.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-app.svg" alt="mobile app icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Mobile apps</h4>
+
+                <p class="service-item-text">
+                  Professional development of applications for iOS and Android.
+                </p>
+              </div>
+
+            </li>
+
+           
+          </ul>
+
+        </section>
+
+
+        <!--
+          - testimonials
+        -->
+
+        
+
+        <!--
+          - testimonials modal
+        -->
+
+        <div class="modal-container" data-modal-container>
+
+          <div class="overlay" data-overlay></div>
+
+          <section class="testimonials-modal">
+
+            <button class="modal-close-btn" data-modal-close-btn>
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+
+            
+
+            <div class="modal-content">
+
+             
+
+            </div>
+
+          </section>
+
+        </div>
+
+
+        <!--
+          - clients
+        -->
+
+        <section class="clients">
+
+          
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #RESUME
+      -->
+
+      <article class="resume" data-page="resume">
+
+        <header>
+          <h2 class="h2 article-title">Resume</h2>
+        </header>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Education</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Durban University of Technology</h4>
+
+              <span>2023 till now</span>
+
+              <p class="timeline-text">
+                I'm a final year student at Durban University of Technology. I study Application development.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Cisco</h4>
+
+              <span>March 11, 2023</span>
+
+              <p class="timeline-text">
+                Certified Packet Tracer User.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Cisco</h4>
+
+              <span>March 05, 2023</span>
+
+              <p class="timeline-text">
+                Certified NDG Linux Unhatched user.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Cisco</h4>
+
+              <span>March 05, 2023</span>
+
+              <p class="timeline-text">
+                Certified Cyber Security Expert.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Cisco</h4>
+
+              <span>March 05, 2023</span>
+
+              <p class="timeline-text">
+                Certificate for Mobile Digital Literacy.
+              </p>
+
+            </li>
+          </ol>
+        </section>
+
+        <a href="./assets/CV/Siyanda's CV.pdf" download="Siyanda's CV.pdf" style="display: inline-block; background-color: black; color: gold; padding: 12px 24px; border: 2px solid gold; border-radius: 8px; font-weight: bold; text-align: center; font-family: 'Poppins', sans-serif;">Download My Resume</a>
+
+      </br>
+
+        <section class="skill">
+
+          <h3 class="h3 skills-title">My skills</h3>
+
+          <ul class="skills-list content-card">
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Web development</h5>
+                <data value="90">90%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 90%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Database Administrater/Maintenance</h5>
+                <data value="90">80%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 80%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Application Development</h5>
+                <data value="85">85%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 85%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Deployment</h5>
+                <data value="70">70%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 70%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Maintenance</h5>
+                <data value="80">80%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 80%;"></div>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #PORTFOLIO
+      -->
+
+      <article class="portfolio" data-page="projects">
+
+        <header>
+            <h2 class="h2 article-title">Projects</h2>
+        </header>
+    
+        <section class="projects">
+    
+            
+    
+            <div class="filter-select-box">
+    
+                <button class="filter-select" data-select>
+    
+                    <div class="select-value" data-selecct-value>Select category</div>
+    
+                    <div class="select-icon">
+                        <ion-icon name="chevron-down"></ion-icon>
+                    </div>
+    
+                </button>
+    
+                <ul class="select-list">
+    
+                    <li class="select-item">
+                        <button data-select-item>All</button>
+                    </li>
+    
+                    <li class="select-item">
+                        <button data-select-item>C#</button>
+                    </li>
+    
+                    <li class="select-item">
+                        <button data-select-item>Java</button>
+                    </li>
+    
+                    <li class="select-item">
+                        <button data-select-item>JavaScript</button>
+                    </li>
+    
+                </ul>
+    
+            </div>
+    
+            <ul class="project-list">
+
+              <li class="project-item active" data-filter-item data-category="C#">
+                    <a href="https://siyanda16-gif.github.io/Xaba/" target="_blank">
+    
+                        <figure class="project-img">
+                            <div class="project-item-icon-box">
+                                <ion-icon name="eye-outline"></ion-icon>
+                            </div>
+    
+                            <img src="./assets/images/Syanda.jpg" alt="E-Commerce Website" loading="lazy">
+                        </figure>
+    
+                        <h3 class="project-title">My other portfolio</h3>
+    
+                        <p class="project-category">C#</p>
+                        <p class="project-category">JavaScript</p>
+                        <p class="project-category">Html</p>
+                        <p class="project-category">CSS</p>
+    
+                    </a>
+                </li>
+
+                <li class="project-item active" data-filter-item data-category="C#">
+                    <a href="https://xcodex12.github.io/Mr-X/" target="_blank">
+    
+                        <figure class="project-img">
+                            <div class="project-item-icon-box">
+                                <ion-icon name="eye-outline"></ion-icon>
+                            </div>
+    
+                            <img src="./assets/images/Mr.jpg" alt="E-Commerce Website" loading="lazy">
+                        </figure>
+    
+                        <h3 class="project-title">E-Commerce Website</h3>
+    
+                        <p class="project-category">C#</p>
+                        <p class="project-category">JavaScript</p>
+                        <p class="project-category">SQL</p>
+                        <p class="project-category">CSS</p>
+    
+                    </a>
+                </li>
+
+                <li class="project-item active" data-filter-item data-category="Java">
+                    <a href="https://xcodex12.github.io/GenV/" target="_blank">
+    
+                        <figure class="project-img">
+                            <div class="project-item-icon-box">
+                                <ion-icon name="eye-outline"></ion-icon>
+                            </div>
+    
+                            <img src="./assets/images/Gen-V.jpg" alt="Pizza App" loading="lazy">
+                        </figure>
+    
+                        <h3 class="project-title">Gen-V App</h3>
+    
+                        <p class="project-category">Html</p>
+                        <p class="project-category">CSS</p>
+                        <p class="project-category">Firebase</p>
+                        <p class="project-category">JavaScript</p>
+    
+                    </a>
+                </li>
+
+                <li class="project-item active" data-filter-item data-category="Java">
+                    <a href="https://github.com/Siyanda16-gif/Pizza-App.git" target="_blank">
+    
+                        <figure class="project-img">
+                            <div class="project-item-icon-box">
+                                <ion-icon name="eye-outline"></ion-icon>
+                            </div>
+    
+                            <img src="./assets/images/Project3.jpg" alt="Pizza App" loading="lazy">
+                        </figure>
+    
+                        <h3 class="project-title">Pizza App</h3>
+    
+                        <p class="project-category">Java</p>
+                        <p class="project-category">SQL</p>
+                        <p class="project-category">JavaScript</p>
+    
+                    </a>
+                </li>
+
+                <li class="project-item active" data-filter-item data-category="Java">
+                    <a href="https://xcodex12.github.io/secure-tracker/" target="_blank">
+    
+                        <figure class="project-img">
+                            <div class="project-item-icon-box">
+                                <ion-icon name="eye-outline"></ion-icon>
+                            </div>
+    
+                            <img src="./assets/images/tracker.jpg" alt="Pizza App" loading="lazy">
+                        </figure>
+    
+                        <h3 class="project-title">Tracker App</h3>
+    
+                        <p class="project-category">Html</p>
+                        <p class="project-category">CSS</p>
+                        <p class="project-category">Firebase</p>
+                        <p class="project-category">JavaScript</p>
+    
+                    </a>
+                </li>
+
+                <li class="project-item active" data-filter-item data-category="C#">
+                    <a href="https://xcodex12.github.io/Chess/" target="_blank">
+    
+                        <figure class="project-img">
+                            <div class="project-item-icon-box">
+                                <ion-icon name="eye-outline"></ion-icon>
+                            </div>
+    
+                            <img src="./assets/images/Chess.jpg" alt="E-Commerce Website" loading="lazy">
+                        </figure>
+    
+                        <h3 class="project-title">ChessBoard Game</h3>
+    
+                        <p class="project-category">Html</p>
+                        <p class="project-category">JavaScript</p>
+                        <p class="project-category">CSS</p>
+                        
+                    </a>
+                </li>
+    
+                <li class="project-item active" data-filter-item data-category="C#">
+                    <a href="https://github.com/Siyanda16-gif/FutureInfinity" target="_blank">
+    
+                        <figure class="project-img">
+                            <div class="project-item-icon-box">
+                                <ion-icon name="eye-outline"></ion-icon>
+                            </div>
+    
+                            
+                        </figure>
+    
+                        <h3 class="project-title">Mechanics Shop app</h3>
+    
+                        <p class="project-category">C#</p>
+                        <p class="project-category">JavaScript</p>
+                        <p class="project-category">Html</p>
+                        <p class="project-category">CSS</p>
+    
+                    </a>
+                </li>
+
+              <li class="project-item active" data-filter-item data-category="C#">
+                    <a href="https://github.com/Siyanda16-gif/Gym-Company-website" target="_blank">
+    
+                        <figure class="project-img">
+                            <div class="project-item-icon-box">
+                                <ion-icon name="eye-outline"></ion-icon>
+                            </div>
+    
+                            
+                        </figure>
+    
+                        <h3 class="project-title">Gym company app</h3>
+    
+                        <p class="project-category">C#</p>
+                        <p class="project-category">JavaScript</p>
+                        <p class="project-category">Html</p>
+                        <p class="project-category">CSS</p>
+    
+                    </a>
+                </li>
+              
+
+            </ul>
+    
+        </section>
+    
+    </article>
+
+
+
+
+
+      <!--
+        - #BLOG
+      -->
+
+      <article class="blog" data-page="blog">
+
+        
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #CONTACT
+      -->
+
+      <article class="contact" data-page="contact">
+
+        <header>
+          <h2 class="h2 article-title">Contact</h2>
+        </header>
+
+        <section class="mapbox" data-mapbox>
+          <figure>
+              <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.257228794739!2d30.39183131531759!3d-29.85755568197126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef7a9bf6a300b39%3A0xab6a8c9c10a53c9e!2s82%20Diakonia%20Ave%2C%20Durban%20Central%2C%20Durban%2C%204001!5e0!3m2!1sen!2sza!4v1631234567890!5m2!1sen!2sza"
+                  width="400" height="300" loading="lazy" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+          </figure>
+      </section>
+
+        <section class="contact-form">
+
+          <h3 class="h3 form-title">Contact Form</h3>
+
+          <form action="#" class="form" data-form>
+
+            <div class="input-wrapper">
+              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+
+              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+            </div>
+
+            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+
+            <button class="form-btn" type="submit" disabled data-form-btn>
+              <ion-icon name="paper-plane"></ion-icon>
+              <span>Send Message</span>
+            </button>
+
+          </form>
+
+        </section>
+
+      </article>
+
+    </div>
+
+  </main>
+
+
+
+
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+<!-- Existing full site HTML preserved -->
+<!-- Appending chatbot UI and logic only -->
+
+<script>
+  // Chatbot toggle button
+  const botButton = document.createElement('button');
+  botButton.id = 'chatbot-btn';
+  botButton.textContent = '💬';
+  Object.assign(botButton.style, {
+    position: 'fixed', bottom: '20px', right: '20px', zIndex: 9999,
+    border: 'none', borderRadius: '50%', width: '60px', height: '60px',
+    fontSize: '24px', cursor: 'pointer', backgroundColor: '#000', color: '#ffd700',
+    boxShadow: '0 4px 12px rgba(0,0,0,0.2)', transition: 'background 0.3s ease'
+  });
+  document.body.appendChild(botButton);
+
+  const botWindow = document.createElement('div');
+  botWindow.id = 'chatbot-window';
+  Object.assign(botWindow.style, {
+    display: 'none', position: 'fixed', bottom: '90px', right: '20px', zIndex: 9999,
+    width: '300px', maxHeight: '400px', backgroundColor: '#000', color: '#ffd700',
+    borderRadius: '10px', boxShadow: '0 0 15px rgba(0,0,0,0.2)', overflow: 'hidden',
+    fontFamily: 'Poppins, sans-serif', fontSize: '14px'
+  });
+  botWindow.innerHTML = `
+    <div style=\"background:#ffd700;color:#000;padding:10px;font-weight:bold;text-align:center\">Ask Siyanda's Bot</div>
+    <div id=\"chatbot-messages\" style=\"padding:10px; max-height:250px; overflow-y:auto\">
+      <div><strong>Bot:</strong> Hi! I'm Siyanda’s personal bot. Ask me about my skills, education, or contact info.</div>
+    </div>
+    <div style=\"display:flex;border-top:1px solid #444\">
+      <input id=\"chatbot-input\" type=\"text\" placeholder=\"Ask something...\" style=\"flex:1;padding:10px;border:none;background:#222;color:#ffd700\">
+      <button onclick=\"sendBotMessage()\" style=\"padding:10px;background:#ffd700;color:#000;border:none\">➤</button>
+    </div>`;
+  document.body.appendChild(botWindow);
+
+  botButton.onclick = () => {
+    botWindow.style.display = botWindow.style.display === 'none' ? 'block' : 'none';
+  };
+
+  const chatbotData = {
+    name: "Siyanda Xaba",
+    email: "siyandaxaba1@gmail.com",
+    phone: "0664428931",
+    location: "Durban, South Africa",
+    education: "Application Development at Durban University of Technology",
+    skills: ["Web Development", "App Development", "Cyber Security", "IT Technician", "Packet Tracer", "Troubleshooting"],
+    languages: ["English (Fluent)", "Zulu (Fluent)"],
+    programming: ["C#", "Java", "JavaScript", "SQL", "HTML", "CSS", "Linux"]
+  };
+
+  function sendBotMessage() {
+    const input = document.getElementById('chatbot-input');
+    const userMsg = input.value.trim();
+    if (!userMsg) return;
+    const chatbox = document.getElementById('chatbot-messages');
+    const userDiv = document.createElement('div');
+    userDiv.innerHTML = `<strong>You:</strong> ${userMsg}`;
+    chatbox.appendChild(userDiv);
+    const reply = getBotReply(userMsg);
+    const botDiv = document.createElement('div');
+    botDiv.innerHTML = `<strong>Bot:</strong> ${reply}`;
+    chatbox.appendChild(botDiv);
+    input.value = '';
+    chatbox.scrollTop = chatbox.scrollHeight;
+  }
+
+  function getBotReply(msg) {
+    msg = msg.toLowerCase();
+    if (msg.includes('name')) return `My name is ${chatbotData.name}.`;
+    if (msg.includes('email')) return `You can email me at ${chatbotData.email}.`;
+    if (msg.includes('phone') || msg.includes('contact')) return `You can contact me at ${chatbotData.phone}.`;
+    if (msg.includes('location') || msg.includes('live')) return `I'm based in ${chatbotData.location}.`;
+    if (msg.includes('education') || msg.includes('study')) return `I study ${chatbotData.education}.`;
+    if (msg.includes('skills')) return `Here are my skills: ${chatbotData.skills.join(', ')}.`;
+    if (msg.includes('language')) return `I speak: ${chatbotData.languages.join(', ')}.`;
+    if (msg.includes('programming')) return `I program in: ${chatbotData.programming.join(', ')}.`;
+    return "Sorry, I don't know that yet. Try asking about my skills, education, or contact info.";
+  }
+</script>
+<!-- End chatbot UI -->
+
+</body>
+
+</html>
