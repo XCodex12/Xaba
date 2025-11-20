@@ -227,16 +227,12 @@
     <script src="script.js"></script>
 
           <p>
-            I am from Durban, South Africa, a final year student at Durban University of Technology that's proficient in web development and application development. I enjoy turning complex problems into simple, beautiful, and intuitive designs.
-          </p>
+    As a passionate Software Developer, I specialize in building dynamic web applications, responsive websites, and native mobile apps for Android. My core expertise lies in C#, Java, HTML, CSS, and JavaScript, which I leverage to create everything from engaging games and online portfolios to sophisticated, data-driven systems. I am skilled in advanced SQL, adhering to both Code-First and Database-First principles on Microsoft SQL Server.
+</p>
 
-          <p>
-            My job is to build your website/application so that it is functional and user-friendly but at the same time attractive.
-            Moreover, I
-            add personal touch to your product and make sure that is eye-catching and easy to use. My aim is to bring
-            across your
-            message and identity in the most creative way.
-          </p>
+<p>
+    My proven track record includes developing 4+ production-grade e-commerce applications and 3+ Java-based Android apps. I am adept at the entire development lifecycle—from design and coding to testing, deployment, and maintenance. I successfully deploy and host applications using Microsoft Azure, creating virtual machines and managing cloud servers to ensure high availability and performance for my clients.
+</p>
         </section>
 
 
@@ -871,6 +867,9 @@
 <!-- Existing full site HTML preserved -->
 <!-- Appending chatbot UI and logic only -->
 
+<!-- Existing full site HTML preserved -->
+<!-- Appending chatbot UI and logic only -->
+
 <script>
   // Chatbot toggle button
   const botButton = document.createElement('button');
@@ -888,63 +887,323 @@
   botWindow.id = 'chatbot-window';
   Object.assign(botWindow.style, {
     display: 'none', position: 'fixed', bottom: '90px', right: '20px', zIndex: 9999,
-    width: '300px', maxHeight: '400px', backgroundColor: '#000', color: '#ffd700',
+    width: '300px', height: '400px', backgroundColor: '#000', color: '#ffd700',
     borderRadius: '10px', boxShadow: '0 0 15px rgba(0,0,0,0.2)', overflow: 'hidden',
-    fontFamily: 'Poppins, sans-serif', fontSize: '14px'
+    fontFamily: 'Poppins, sans-serif', fontSize: '14px', border: '1px solid #ffd700'
   });
   botWindow.innerHTML = `
-    <div style=\"background:#ffd700;color:#000;padding:10px;font-weight:bold;text-align:center\">Ask Siyanda's Bot</div>
-    <div id=\"chatbot-messages\" style=\"padding:10px; max-height:250px; overflow-y:auto\">
-      <div><strong>Bot:</strong> Hi! I'm Siyanda’s personal bot. Ask me about my skills, education, or contact info.</div>
+    <div style="background:#ffd700;color:#000;padding:10px;font-weight:bold;text-align:center;border-bottom:1px solid #444">Chat with Siyanda's Bot</div>
+    <div id="chatbot-messages" style="padding:10px; height:300px; overflow-y:auto; display:flex; flex-direction:column; gap:8px;">
+      <div style="display:flex; justify-content:flex-start;">
+        <div style="background:#333; color:#ffd700; padding:8px 12px; border-radius:12px; max-width:80%;">
+          <strong>Bot:</strong> Hey there! I'm Siyanda's assistant. Ask me about specific projects, skills, or just chat! 😊
+        </div>
+      </div>
     </div>
-    <div style=\"display:flex;border-top:1px solid #444\">
-      <input id=\"chatbot-input\" type=\"text\" placeholder=\"Ask something...\" style=\"flex:1;padding:10px;border:none;background:#222;color:#ffd700\">
-      <button onclick=\"sendBotMessage()\" style=\"padding:10px;background:#ffd700;color:#000;border:none\">➤</button>
+    <div style="display:flex;border-top:1px solid #444; padding:10px;">
+      <input id="chatbot-input" type="text" placeholder="Type your message..." style="flex:1;padding:8px;border:1px solid #ffd700;background:#222;color:#ffd700;border-radius:20px;margin-right:8px;">
+      <button onclick="sendBotMessage()" style="padding:8px 15px;background:#ffd700;color:#000;border:none;border-radius:20px;cursor:pointer">Send</button>
     </div>`;
   document.body.appendChild(botWindow);
 
   botButton.onclick = () => {
     botWindow.style.display = botWindow.style.display === 'none' ? 'block' : 'none';
+    document.getElementById('chatbot-input').focus();
   };
+
+  // Enter key support
+  document.getElementById('chatbot-input').addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') {
+      sendBotMessage();
+    }
+  });
+
+  // Project database with skills mapping
+  const projects = [
+    {
+      name: "Pizza App",
+      description: "A complete pizza ordering application built with Java and Android Studio",
+      skills: ["Java", "Android Studio", "SQL", "Mobile Development"],
+      technologies: ["Java", "SQL", "Android Studio"],
+      category: "Java",
+      link: "https://github.com/Siyanda16-gif/Pizza-App.git",
+      type: "Mobile App"
+    },
+    {
+      name: "Mr-X E-Commerce",
+      description: "Full-featured e-commerce website with shopping cart and payment integration",
+      skills: ["C#", "JavaScript", "SQL", "Web Development"],
+      technologies: ["C#", "JavaScript", "SQL", "CSS"],
+      category: "C#",
+      link: "https://xcodex12.github.io/Mr-X/",
+      type: "Web Application"
+    },
+    {
+      name: "ChessBoard Game",
+      description: "Interactive chess game with multiplayer functionality",
+      skills: ["JavaScript", "HTML", "CSS", "Game Development"],
+      technologies: ["HTML", "JavaScript", "CSS"],
+      category: "JavaScript",
+      link: "https://xcodex12.github.io/Chess/",
+      type: "Web Game"
+    },
+    {
+      name: "Gen-V App",
+      description: "Modern web application with Firebase integration",
+      skills: ["HTML", "CSS", "Firebase", "JavaScript"],
+      technologies: ["HTML", "CSS", "Firebase", "JavaScript"],
+      category: "JavaScript",
+      link: "https://xcodex12.github.io/GenV/",
+      type: "Web Application"
+    },
+    {
+      name: "Tracker App",
+      description: "Secure tracking application with real-time updates",
+      skills: ["HTML", "CSS", "Firebase", "JavaScript"],
+      technologies: ["HTML", "CSS", "Firebase", "JavaScript"],
+      category: "JavaScript",
+      link: "https://xcodex12.github.io/secure-tracker/",
+      type: "Web Application"
+    },
+    {
+      name: "Mechanics Shop App",
+      description: "Automotive shop management system",
+      skills: ["C#", "JavaScript", "HTML", "CSS"],
+      technologies: ["C#", "JavaScript", "HTML", "CSS"],
+      category: "C#",
+      link: "https://github.com/Siyanda16-gif/FutureInfinity",
+      type: "Web Application"
+    },
+    {
+      name: "Gym Company App",
+      description: "Fitness center management platform",
+      skills: ["C#", "JavaScript", "HTML", "CSS"],
+      technologies: ["C#", "JavaScript", "HTML", "CSS"],
+      category: "C#",
+      link: "https://github.com/Siyanda16-gif/Gym-Company-website",
+      type: "Web Application"
+    },
+    {
+      name: "TechBase App",
+      description: "Technology showcase and portfolio website",
+      skills: ["HTML", "JavaScript", "CSS", "Web Design"],
+      technologies: ["HTML", "JavaScript", "CSS"],
+      category: "JavaScript",
+      link: "https://xcodex12.github.io/TechBase/",
+      type: "Portfolio Website"
+    }
+  ];
 
   const chatbotData = {
     name: "Siyanda Xaba",
     email: "siyandaxaba1@gmail.com",
     phone: "0664428931",
     location: "Durban, South Africa",
-    education: "Application Development at Durban University of Technology",
-    skills: ["Web Development", "App Development", "Cyber Security", "IT Technician", "Packet Tracer", "Troubleshooting"],
-    languages: ["English (Fluent)", "Zulu (Fluent)"],
-    programming: ["C#", "Java", "JavaScript", "SQL", "HTML", "CSS", "Linux"]
+    education: "I have completed my qualification in Application Development at Durban University of Technology",
+    skills: ["C#", "Java", "JavaScript", "HTML", "CSS", "SQL", "Azure", "Web Development", "Mobile App Development", "Database Management"],
+    experience: "Full-stack developer specializing in web apps, mobile apps, and cloud deployment using Microsoft Azure",
+    status: "I have completed my studies and am now a professional software developer"
   };
 
   function sendBotMessage() {
     const input = document.getElementById('chatbot-input');
     const userMsg = input.value.trim();
     if (!userMsg) return;
+    
     const chatbox = document.getElementById('chatbot-messages');
+    
+    // Add user message
     const userDiv = document.createElement('div');
-    userDiv.innerHTML = `<strong>You:</strong> ${userMsg}`;
+    userDiv.style.display = 'flex';
+    userDiv.style.justifyContent = 'flex-end';
+    userDiv.innerHTML = `<div style="background:#ffd700;color:#000;padding:8px 12px;border-radius:12px;max-width:80%"><strong>You:</strong> ${userMsg}</div>`;
     chatbox.appendChild(userDiv);
-    const reply = getBotReply(userMsg);
-    const botDiv = document.createElement('div');
-    botDiv.innerHTML = `<strong>Bot:</strong> ${reply}`;
-    chatbox.appendChild(botDiv);
+    
     input.value = '';
     chatbox.scrollTop = chatbox.scrollHeight;
+
+    // Bot typing indicator
+    const typingDiv = document.createElement('div');
+    typingDiv.style.display = 'flex';
+    typingDiv.style.justifyContent = 'flex-start';
+    typingDiv.innerHTML = `<div style="background:#333;color:#ffd700;padding:8px 12px;border-radius:12px"><em>Bot is typing...</em></div>`;
+    chatbox.appendChild(typingDiv);
+    chatbox.scrollTop = chatbox.scrollHeight;
+
+    // Simulate typing delay
+    setTimeout(() => {
+      chatbox.removeChild(typingDiv);
+      const reply = getBotReply(userMsg);
+      const botDiv = document.createElement('div');
+      botDiv.style.display = 'flex';
+      botDiv.style.justifyContent = 'flex-start';
+      botDiv.innerHTML = `<div style="background:#333;color:#ffd700;padding:8px 12px;border-radius:12px;max-width:80%"><strong>Bot:</strong> ${reply}</div>`;
+      chatbox.appendChild(botDiv);
+      chatbox.scrollTop = chatbox.scrollHeight;
+    }, 1000);
   }
 
   function getBotReply(msg) {
-    msg = msg.toLowerCase();
-    if (msg.includes('name')) return `My name is ${chatbotData.name}.`;
-    if (msg.includes('email')) return `You can email me at ${chatbotData.email}.`;
-    if (msg.includes('phone') || msg.includes('contact')) return `You can contact me at ${chatbotData.phone}.`;
-    if (msg.includes('location') || msg.includes('live')) return `I'm based in ${chatbotData.location}.`;
-    if (msg.includes('education') || msg.includes('study')) return `I study ${chatbotData.education}.`;
-    if (msg.includes('skills')) return `Here are my skills: ${chatbotData.skills.join(', ')}.`;
-    if (msg.includes('language')) return `I speak: ${chatbotData.languages.join(', ')}.`;
-    if (msg.includes('programming')) return `I program in: ${chatbotData.programming.join(', ')}.`;
-    return "Sorry, I don't know that yet. Try asking about my skills, education, or contact info.";
+    const lowerMsg = msg.toLowerCase();
+    
+    // Handle spelling variations and fuzzy matching
+    const normalizedMsg = lowerMsg
+      .replace(/[^\w\s]/g, '') // Remove punctuation
+      .replace(/\s+/g, ' ')    // Normalize spaces
+      .trim();
+
+    // Greetings and casual conversation
+    if (containsAny(normalizedMsg, ['hi', 'hello', 'hey', 'sup', 'yo', 'hola'])) {
+      return getRandomResponse([
+        "Hello there! 👋 Ask me about Siyanda's specific projects or skills!",
+        "Hey! Want to see some cool projects Siyanda built?",
+        "Hi! I can show you Siyanda's projects for each programming language!",
+        "Hello! Ask me about Java, C#, JavaScript projects or any specific app! 😄"
+      ]);
+    }
+
+    if (containsAny(normalizedMsg, ['how are you', 'how you', 'how r u', 'how u doing'])) {
+      return getRandomResponse([
+        "I'm doing great! Ready to show you Siyanda's awesome projects. How about you?",
+        "I'm fantastic! Excited to tell you about specific projects. How are you doing?",
+        "Doing well! I can link skills to actual projects if you're interested!"
+      ]);
+    }
+
+    // Specific project inquiries
+    if (containsAny(normalizedMsg, ['pizza', 'pizzeria', 'pizza app'])) {
+      const pizzaProject = projects.find(p => p.name.toLowerCase().includes('pizza'));
+      return `🍕 <strong>Pizza App:</strong> ${pizzaProject.description}<br><br>
+              <strong>Technologies:</strong> ${pizzaProject.technologies.join(', ')}<br>
+              <strong>Type:</strong> ${pizzaProject.type}<br>
+              <a href="${pizzaProject.link}" target="_blank" style="color:#ffd700; text-decoration:underline">View Project →</a>`;
+    }
+
+    if (containsAny(normalizedMsg, ['chess', 'chessboard', 'game'])) {
+      const chessProject = projects.find(p => p.name.toLowerCase().includes('chess'));
+      return `♟️ <strong>ChessBoard Game:</strong> ${chessProject.description}<br><br>
+              <strong>Technologies:</strong> ${chessProject.technologies.join(', ')}<br>
+              <strong>Type:</strong> ${chessProject.type}<br>
+              <a href="${chessProject.link}" target="_blank" style="color:#ffd700; text-decoration:underline">Play Game →</a>`;
+    }
+
+    if (containsAny(normalizedMsg, ['ecommerce', 'e-commerce', 'shop', 'store', 'mr x'])) {
+      const ecommerceProject = projects.find(p => p.name.toLowerCase().includes('e-commerce') || p.name.includes('Mr-X'));
+      return `🛒 <strong>${ecommerceProject.name}:</strong> ${ecommerceProject.description}<br><br>
+              <strong>Technologies:</strong> ${ecommerceProject.technologies.join(', ')}<br>
+              <strong>Type:</strong> ${ecommerceProject.type}<br>
+              <a href="${ecommerceProject.link}" target="_blank" style="color:#ffd700; text-decoration:underline">View Store →</a>`;
+    }
+
+    // Skills with project examples
+    if (containsAny(normalizedMsg, ['java', 'android'])) {
+      const javaProjects = projects.filter(p => p.skills.includes('Java') || p.technologies.includes('Java'));
+      let response = `☕ <strong>Java/Android Skills:</strong> Siyanda is proficient in Java and Android Studio development.<br><br>`;
+      response += `<strong>Java Projects:</strong><br>`;
+      javaProjects.forEach(project => {
+        response += `• ${project.name}: ${project.description}<br>`;
+        response += `  <a href="${project.link}" target="_blank" style="color:#ffd700; text-decoration:underline">View Project</a><br><br>`;
+      });
+      return response;
+    }
+
+    if (containsAny(normalizedMsg, ['c#', 'c sharp'])) {
+      const csharpProjects = projects.filter(p => p.skills.includes('C#') || p.technologies.includes('C#'));
+      let response = `🔷 <strong>C# Skills:</strong> Siyanda builds robust applications with C#.<br><br>`;
+      response += `<strong>C# Projects:</strong><br>`;
+      csharpProjects.forEach(project => {
+        response += `• ${project.name}: ${project.description}<br>`;
+        response += `  <a href="${project.link}" target="_blank" style="color:#ffd700; text-decoration:underline">View Project</a><br><br>`;
+      });
+      return response;
+    }
+
+    if (containsAny(normalizedMsg, ['javascript', 'js'])) {
+      const jsProjects = projects.filter(p => p.skills.includes('JavaScript') || p.technologies.includes('JavaScript'));
+      let response = `🟨 <strong>JavaScript Skills:</strong> Siyanda creates dynamic web applications with JavaScript.<br><br>`;
+      response += `<strong>JavaScript Projects:</strong><br>`;
+      jsProjects.forEach(project => {
+        response += `• ${project.name}: ${project.description}<br>`;
+        response += `  <a href="${project.link}" target="_blank" style="color:#ffd700; text-decoration:underline">View Project</a><br><br>`;
+      });
+      return response;
+    }
+
+    if (containsAny(normalizedMsg, ['sql', 'database'])) {
+      const sqlProjects = projects.filter(p => p.skills.includes('SQL') || p.technologies.includes('SQL'));
+      let response = `🗄️ <strong>SQL/Database Skills:</strong> Siyanda manages databases using SQL Server.<br><br>`;
+      response += `<strong>Projects with SQL:</strong><br>`;
+      sqlProjects.forEach(project => {
+        response += `• ${project.name}: ${project.description}<br>`;
+        response += `  <a href="${project.link}" target="_blank" style="color:#ffd700; text-decoration:underline">View Project</a><br><br>`;
+      });
+      return response;
+    }
+
+    // General skills query
+    if (containsAny(normalizedMsg, ['skill', 'what can you do', 'programming', 'language', 'tech'])) {
+      return `💼 <strong>Siyanda's Skills:</strong> ${chatbotData.skills.join(', ')}<br><br>
+              <strong>Ask about specific skills to see projects!</strong><br>
+              Try: "Show me Java projects" or "What C# apps have you built?"`;
+    }
+
+    // Project list
+    if (containsAny(normalizedMsg, ['project', 'app', 'website', 'build', 'create', 'show project', 'all project'])) {
+      let response = `🚀 <strong>Siyanda's Projects:</strong><br><br>`;
+      projects.forEach(project => {
+        response += `• <strong>${project.name}</strong> (${project.type})<br>`;
+        response += `  ${project.description}<br>`;
+        response += `  <a href="${project.link}" target="_blank" style="color:#ffd700; text-decoration:underline">View Project</a><br><br>`;
+      });
+      return response;
+    }
+
+    if (containsAny(normalizedMsg, ['experience', 'work', 'job', 'professional'])) {
+      return chatbotData.experience + ". " + chatbotData.status;
+    }
+
+    if (containsAny(normalizedMsg, ['education', 'study', 'student', 'graduate', 'qualification', 'school', 'university'])) {
+      return chatbotData.education + ". " + chatbotData.status + " He's now focused on building amazing software solutions.";
+    }
+
+    if (containsAny(normalizedMsg, ['contact', 'email', 'phone', 'number', 'reach', 'get in touch'])) {
+      return `📞 <strong>Contact Siyanda:</strong><br>
+              📧 Email: ${chatbotData.email}<br>
+              📱 Phone: ${chatbotData.phone}<br>
+              📍 Location: ${chatbotData.location}`;
+    }
+
+    if (containsAny(normalizedMsg, ['bye', 'goodbye', 'see you', 'later', 'exit', 'quit'])) {
+      return getRandomResponse([
+        "Thanks for chatting! Check out Siyanda's projects above! ",
+        "It was great showing you the projects! Goodbye!",
+        "See you later! Don't forget to explore the projects I mentioned! "
+      ]);
+    }
+
+    if (containsAny(normalizedMsg, ['thank', 'thanks', 'appreciate'])) {
+      return getRandomResponse([
+        "You're welcome! Hope you liked the projects! ",
+        "No problem! Want to see more specific projects?",
+        "Anytime! Which project interested you the most?"
+      ]);
+    }
+
+    // Default response
+    return getRandomResponse([
+      "I can show you specific projects! Try asking about:<br>• 'Java projects'<br>• 'Pizza app'<br>• 'C# applications'<br>• 'All projects'",
+      "Want to see Siyanda's work? Ask about specific technologies like Java, C#, JavaScript, or specific apps like the Pizza App!",
+      "I'd love to show you projects! Ask me about:<br>• Specific skills (Java, C#, etc.)<br>• Project types (games, e-commerce)<br>• Or say 'show all projects'"
+    ]);
+  }
+
+  // Helper functions
+  function containsAny(text, keywords) {
+    return keywords.some(keyword => text.includes(keyword));
+  }
+
+  function getRandomResponse(responses) {
+    return responses[Math.floor(Math.random() * responses.length)];
   }
 </script>
 <!-- End chatbot UI -->
