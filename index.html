@@ -5,38 +5,25 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Siyanda Xaba's Portfolio</title>
-
-  <!--
-    - favicon
-  -->
-  <link rel="shortcut icon" href="./assets/images/Logo1.jpg" type="icon image">
-
-  <!--
-    - custom css link
-  -->
+  <title>Siyanda Xaba | Software Developer, Durban</title>
+  <meta name="description" content="Siyanda Xaba is a Durban-based software developer with an Advanced Diploma in ICT (DUT). Full-stack web and Android apps with C#, Java, JavaScript, React and Node.js. Open to work.">
+  <meta name="author" content="Siyanda Xaba">
+  <meta property="og:title" content="Siyanda Xaba | Software Developer">
+  <meta property="og:description" content="Advanced Diploma in ICT graduate. Full-stack web and Android developer based in Durban. See my projects and download my CV.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#1e1e1f">
+  <link rel="shortcut icon" href="./assets/images/Logo1.jpg" type="image/jpeg">
   <link rel="stylesheet" href="./assets/css/style.css">
-
-  <!--
-    - google font link
-  -->
+  <link rel="stylesheet" href="./assets/css/chatbot.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
-
-  <!--
-    - #MAIN
-  -->
-
   <main>
 
-    <!--
-      - #SIDEBAR
-    -->
-
+    <!-- #SIDEBAR -->
     <aside class="sidebar" data-sidebar>
 
       <div class="sidebar-info">
@@ -46,9 +33,10 @@
       </figure>
 
         <div class="info-content">
-          <h1 class="name" title="Richard hanrick">Siyanda Xaba</h1>
+          <h1 class="name" title="Siyanda Xaba">Siyanda Xaba</h1>
 
-          <p class="title">Web & App developer</p>
+          <p class="title">Software Developer</p>
+          <p class="status-pill"><span class="dot"></span> Open to work</p>
         </div>
 
         <button class="info_more-btn" data-sidebar-btn>
@@ -88,7 +76,7 @@
             <div class="contact-info">
               <p class="contact-title">Phone</p>
 
-              <a href="tel:+27664428931" class="contact-link">0664428931</a>
+              <a href="tel:+27664428931" class="contact-link">066 442 8931</a>
             </div>
 
 
@@ -104,7 +92,7 @@
             <div class="contact-info">
               <p class="contact-title">Location</p>
 
-              <address>82 Diakonia Avenue, Durban</address>
+              <address>Durban, KwaZulu-Natal</address>
             </div>
 
           </li>
@@ -116,19 +104,25 @@
         <ul class="social-list">
 
           <li class="social-item">
-            <a href="https://www.facebook.com/syandaxabziin.xaba?mibextid=ZbWKwL" class="social-link">
+            <a href="https://github.com/XCodex12" class="social-link" target="_blank" rel="noopener" aria-label="GitHub">
+              <ion-icon name="logo-github"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://www.facebook.com/syandaxabziin.xaba?mibextid=ZbWKwL" class="social-link" target="_blank" rel="noopener">
               <ion-icon name="logo-facebook"></ion-icon>
             </a>
           </li>
 
           <li class="social-item">
-            <a href="https://www.linkedin.com/in/siyanda-xaba-13a211273?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="social-link">
+            <a href="https://www.linkedin.com/in/siyanda-xaba-13a211273?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="social-link" target="_blank" rel="noopener">
               <ion-icon name="logo-linkedin"></ion-icon>
           </a>
           </li>
 
           <li class="social-item">
-            <a href="https://www.instagram.com/xabziin6/profilecard/?igsh=bTBtaGZ3NGZ0NzNh" class="social-link">
+            <a href="https://www.instagram.com/xabziin6/profilecard/?igsh=bTBtaGZ3NGZ0NzNh" class="social-link" target="_blank" rel="noopener">
               <ion-icon name="logo-instagram"></ion-icon>
             </a>
           </li>
@@ -139,1075 +133,203 @@
 
     </aside>
 
-
-
-
-
-    <!--
-      - #main-content
-    -->
-
     <div class="main-content">
 
-      <!--
-        - #NAVBAR
-      -->
-
+      <!-- #NAVBAR -->
       <nav class="navbar">
-
         <ul class="navbar-list">
-
-          <li class="navbar-item">
-            <button class="navbar-link  active" data-nav-link>About</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Resume</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>projects</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Contact</button>
-          </li>
-          <script>
-            // Select the checkbox element
-            const checkbox = document.getElementById('theme-checkbox');
-        
-            // Function to toggle the theme
-            checkbox.addEventListener('change', () => {
-                // Toggle the 'light-theme' class on the body
-                document.body.classList.toggle('light-theme', checkbox.checked);
-                
-                // Save the theme preference in local storage
-                localStorage.setItem('theme', checkbox.checked ? 'light' : 'dark');
-            });
-        
-            // Load the theme from local storage on page load
-            window.addEventListener('load', () => {
-                // Get the stored theme preference
-                const theme = localStorage.getItem('theme');
-                
-                // Check if the stored theme is 'light'
-                if (theme === 'light') {
-                    checkbox.checked = true; // Set checkbox to checked
-                    document.body.classList.add('light-theme'); // Add light-theme class
-                } else {
-                    checkbox.checked = false; // Ensure checkbox is unchecked
-                    document.body.classList.remove('light-theme'); // Remove light-theme class
-                }
-            });
-        </script>
-
+          <li class="navbar-item"><button class="navbar-link active" data-nav-link data-target="about">About</button></li>
+          <li class="navbar-item"><button class="navbar-link" data-nav-link data-target="resume">Resume</button></li>
+          <li class="navbar-item"><button class="navbar-link" data-nav-link data-target="projects">Projects</button></li>
+          <li class="navbar-item"><button class="navbar-link" data-nav-link data-target="contact">Contact</button></li>
         </ul>
-
       </nav>
 
+      <!-- #ABOUT -->
+      <article class="about active" data-page="about">
 
-
-
-
-      <!--
-        - #ABOUT
-      -->
-
-      <article class="about  active" data-page="about">
-
-        <header>
-          <h2 class="h2 article-title">About me</h2>
-        </header>
+        <header><h2 class="h2 article-title">About me</h2></header>
 
         <section class="about-text">
+          <p class="typing-line">I am a <span id="typing-text"></span><span class="caret"></span></p>
 
-          <p>
-        <span id="typing-text"></span> 
-    </p>
-    <script src="script.js"></script>
+          <p>I am a software developer who has just completed an <strong>Advanced Diploma in Information and Communications Technology (NQF 7)</strong> at Durban University of Technology, following my Diploma in ICT in Application Development. I build full-stack web apps and Android apps with C#, Java, JavaScript, React and Node.js, store data in SQL Server, PostgreSQL, Firebase and Supabase, and deploy on Microsoft Azure and Netlify.</p>
 
-          <p>
-    As a passionate Software Developer, I specialize in building dynamic web applications, responsive websites, and native mobile apps for Android. My core expertise lies in C#, Java, HTML, CSS, and JavaScript, which I leverage to create everything from engaging games and online portfolios to sophisticated, data-driven systems. I am skilled in advanced SQL, adhering to both Code-First and Database-First principles on Microsoft SQL Server.
-</p>
+          <p>I have also worked in IT support and as a school technician and tutor, so I am comfortable fixing real problems for real users. This year's studies added Machine Learning, Business Intelligence, Data Structures and Software Development and Management to my toolkit. I am looking for a junior developer or IT support role where I can keep growing and ship useful software.</p>
 
-<p>
-    My proven track record includes developing 4+ production-grade e-commerce applications and 3+ Java-based Android apps. I am adept at the entire development lifecycle—from design and coding to testing, deployment, and maintenance. I successfully deploy and host applications using Microsoft Azure, creating virtual machines and managing cloud servers to ensure high availability and performance for my clients.
-</p>
+          <div class="cta-row">
+            <a class="action-btn primary" href="./assets/CV/Siyanda-Xaba-CV.pdf" download="Siyanda-Xaba-CV.pdf"><ion-icon name="download-outline"></ion-icon><span>Download CV</span></a>
+            <button class="action-btn" data-goto="contact"><ion-icon name="mail-outline"></ion-icon><span>Get in touch</span></button>
+            <button class="action-btn" data-open-chat><ion-icon name="chatbubble-ellipses-outline"></ion-icon><span>Ask my assistant</span></button>
+          </div>
         </section>
 
-
-        <!--
-          - service
-        -->
+        <section class="stats">
+          <div class="stat"><strong>NQF 7</strong><span>Advanced Diploma in ICT, DUT 2026</span></div>
+          <div class="stat"><strong><span id="project-count">12</span></strong><span>Projects built</span></div>
+          <div class="stat"><strong>4</strong><span>Cisco certificates</span></div>
+          <div class="stat"><strong>3</strong><span>Roles in IT and education</span></div>
+        </section>
 
         <section class="service">
-
-          <h3 class="h3 service-title">What i'm doing</h3>
-
+          <h3 class="h3 service-title">What I do</h3>
           <ul class="service-list">
-
             <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-design.svg
-                " alt="design icon" width="40">
-              </div>
-
+              <div class="service-icon-box"><img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40"></div>
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Web design</h4>
-
-                <p class="service-item-text">
-                  The most modern and high-quality design made at a professional level.
-                </p>
+                <h4 class="h4 service-item-title">Full-stack web development</h4>
+                <p class="service-item-text">React, Node.js, C# and JavaScript front ends and APIs backed by SQL, PostgreSQL, Firebase or Supabase.</p>
               </div>
-
             </li>
-
             <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
-              </div>
-
+              <div class="service-icon-box"><img src="./assets/images/icon-app.svg" alt="Mobile app icon" width="40"></div>
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Web development</h4>
-
-                <p class="service-item-text">
-                  High-quality development of sites at the professional level.
-                </p>
+                <h4 class="h4 service-item-title">Android and mobile apps</h4>
+                <p class="service-item-text">Native Java apps in Android Studio and cross-platform apps with C# and .NET MAUI.</p>
               </div>
-
             </li>
-
             <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-app.svg" alt="mobile app icon" width="40">
-              </div>
-
+              <div class="service-icon-box"><img src="./assets/images/icon-design.svg" alt="Design icon" width="40"></div>
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Mobile apps</h4>
-
-                <p class="service-item-text">
-                  Professional development of applications for iOS and Android.
-                </p>
+                <h4 class="h4 service-item-title">Cloud deployment and IT support</h4>
+                <p class="service-item-text">Hosting on Azure virtual machines and Netlify, plus hands-on troubleshooting for computers, software and networks.</p>
               </div>
-
             </li>
-
-           
+            <li class="service-item">
+              <div class="service-icon-box"><img src="./assets/images/icon-quote.svg" alt="Data icon" width="40"></div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Data, ML and business intelligence</h4>
+                <p class="service-item-text">Studied Machine Learning, Business Intelligence and Data Structures in my Advanced Diploma.</p>
+              </div>
+            </li>
           </ul>
-
-        </section>
-
-
-        <!--
-          - testimonials
-        -->
-
-        
-
-        <!--
-          - testimonials modal
-        -->
-
-        <div class="modal-container" data-modal-container>
-
-          <div class="overlay" data-overlay></div>
-
-          <section class="testimonials-modal">
-
-            <button class="modal-close-btn" data-modal-close-btn>
-              <ion-icon name="close-outline"></ion-icon>
-            </button>
-
-            
-
-            <div class="modal-content">
-
-             
-
-            </div>
-
-          </section>
-
-        </div>
-
-
-        <!--
-          - clients
-        -->
-
-        <section class="clients">
-
-          
-
         </section>
 
       </article>
 
-
-
-
-
-      <!--
-        - #RESUME
-      -->
-
+      <!-- #RESUME -->
       <article class="resume" data-page="resume">
 
-        <header>
-          <h2 class="h2 article-title">Resume</h2>
-        </header>
+        <header><h2 class="h2 article-title">Resume</h2></header>
+
+        <a class="resume-btn" href="./assets/CV/Siyanda-Xaba-CV.pdf" download="Siyanda-Xaba-CV.pdf">
+          <span class="resume-btn-icon"><ion-icon name="document-text-outline"></ion-icon></span>
+          <span class="resume-btn-text"><strong>Download my CV</strong><small>PDF, one page</small></span>
+          <ion-icon class="resume-btn-arrow" name="download-outline"></ion-icon>
+        </a>
 
         <section class="timeline">
-
           <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-
+            <div class="icon-box"><ion-icon name="book-outline"></ion-icon></div>
             <h3 class="h3">Education</h3>
           </div>
-
           <ol class="timeline-list">
-
             <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Durban University of Technology</h4>
-
-              <span>2023 - 2025</span>
-
-              <p class="timeline-text">
-                I'm a qualified Software Engineer with Diploma from Durban University of Technology.
-              </p>
-
+              <h4 class="h4 timeline-item-title">Advanced Diploma in ICT (NQF 7)</h4>
+              <span>Durban University of Technology | February to November 2026</span>
+              <p class="timeline-text">Completed. Modules included Data Structures, Platform Based Development, Machine Learning, Business Intelligence, Software Development and Management, Applied Mathematics for Computing and Research Skills.</p>
             </li>
-
             <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Cisco</h4>
-
-              <span>March 11, 2023</span>
-
-              <p class="timeline-text">
-                Certified Packet Tracer User.
-              </p>
-
+              <h4 class="h4 timeline-item-title">Diploma in ICT in Application Development (NQF 6)</h4>
+              <span>Durban University of Technology | 2023 to 2025</span>
+              <p class="timeline-text">Completed. Distinctions in Applications Development, Communication Networks, ICT Literacy and Entrepreneurial Spirit.</p>
             </li>
-
             <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Cisco</h4>
-
-              <span>March 05, 2023</span>
-
-              <p class="timeline-text">
-                Certified NDG Linux Unhatched user.
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Cisco</h4>
-
-              <span>March 05, 2023</span>
-
-              <p class="timeline-text">
-                Certified Cyber Security Expert.
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Cisco</h4>
-
-              <span>March 05, 2023</span>
-
-              <p class="timeline-text">
-                Certificate for Mobile Digital Literacy.
-              </p>
-
+              <h4 class="h4 timeline-item-title">National Senior Certificate</h4>
+              <span>Sidelile High School | 2018 to 2022</span>
             </li>
           </ol>
         </section>
 
-        <a href="./assets/CV/Siyanda's CV.pdf" download="Siyanda's CV.pdf" style="display: inline-block; background-color: black; color: gold; padding: 12px 24px; border: 2px solid gold; border-radius: 8px; font-weight: bold; text-align: center; font-family: 'Poppins', sans-serif;">Download My Resume</a>
+        <section class="timeline">
+          <div class="title-wrapper">
+            <div class="icon-box"><ion-icon name="briefcase-outline"></ion-icon></div>
+            <h3 class="h3">Experience</h3>
+          </div>
+          <ol class="timeline-list">
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Invigilator, Rosebank College (Durban)</h4>
+              <span>September 2026 to present</span>
+              <p class="timeline-text">Supervise exams, verify student IDs and attendance and uphold exam rules.</p>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">IT Support, Chatsworth Teachers' Centre</h4>
+              <span>February to August 2026</span>
+              <p class="timeline-text">Troubleshooting and technical support for computers, software and network issues.</p>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Technician and Tutor, Sidelile High School</h4>
+              <span>2021 to 2022</span>
+              <p class="timeline-text">Maintained school IT equipment and tutored learners.</p>
+            </li>
+          </ol>
+        </section>
 
-      </br>
+        <section class="timeline">
+          <div class="title-wrapper">
+            <div class="icon-box"><ion-icon name="ribbon-outline"></ion-icon></div>
+            <h3 class="h3">Certificates</h3>
+          </div>
+          <ol class="timeline-list">
+            <li class="timeline-item"><h4 class="h4 timeline-item-title">Cisco Networking Academy</h4><span>March 2023</span>
+              <p class="timeline-text">Packet Tracer user, NDG Linux Unhatched, Cybersecurity and Mobile Digital Literacy.</p></li>
+          </ol>
+        </section>
+
+        <section class="modules">
+          <h3 class="h3 skills-title">Modules completed</h3>
+          <div id="modules-list"></div>
+        </section>
 
         <section class="skill">
-
           <h3 class="h3 skills-title">My skills</h3>
-
-          <ul class="skills-list content-card">
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Web development</h5>
-                <data value="98">98%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 98%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Database Administrater/Maintenance</h5>
-                <data value="90">90%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 90%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Application Development</h5>
-                <data value="95">95%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 95%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Deployment</h5>
-                <data value="90">90%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 90%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Maintenance</h5>
-                <data value="95">95%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 95%;"></div>
-              </div>
-
-            </li>
-
-          </ul>
-
+          <div id="skills-groups" class="skills-groups"></div>
         </section>
 
       </article>
 
-
-
-
-
-      <!--
-        - #PORTFOLIO
-      -->
-
+      <!-- #PROJECTS -->
       <article class="portfolio" data-page="projects">
-
-        <header>
-            <h2 class="h2 article-title">Projects</h2>
-        </header>
-    
+        <header><h2 class="h2 article-title">Projects</h2></header>
         <section class="projects">
-    
-            
-    
-            <div class="filter-select-box">
-    
-                <button class="filter-select" data-select>
-    
-                    <div class="select-value" data-selecct-value>Select category</div>
-    
-                    <div class="select-icon">
-                        <ion-icon name="chevron-down"></ion-icon>
-                    </div>
-    
-                </button>
-    
-                <ul class="select-list">
-    
-                    <li class="select-item">
-                        <button data-select-item>All</button>
-                    </li>
-    
-                    <li class="select-item">
-                        <button data-select-item>C#</button>
-                    </li>
-    
-                    <li class="select-item">
-                        <button data-select-item>Java</button>
-                    </li>
-    
-                    <li class="select-item">
-                        <button data-select-item>JavaScript</button>
-                    </li>
-    
-                </ul>
-    
-            </div>
-    
-            <ul class="project-list">
-
-              <li class="project-item active" data-filter-item data-category="C#">
-                    <a href="https://siyanda16-gif.github.io/Xaba/" target="_blank">
-    
-                        <figure class="project-img">
-                            <div class="project-item-icon-box">
-                                <ion-icon name="eye-outline"></ion-icon>
-                            </div>
-    
-                            <img src="./assets/images/Syanda.jpg" alt="E-Commerce Website" loading="lazy">
-                        </figure>
-    
-                        <h3 class="project-title">My other portfolio</h3>
-    
-                        <p class="project-category">C#</p>
-                        <p class="project-category">JavaScript</p>
-                        <p class="project-category">Html</p>
-                        <p class="project-category">CSS</p>
-    
-                    </a>
-                </li>
-
-              <li class="project-item active" data-filter-item data-category="C#">
-                    <a href="https://xcodex12.github.io/TechBase/" target="_blank">
-    
-                        <figure class="project-img">
-                            <div class="project-item-icon-box">
-                                <ion-icon name="eye-outline"></ion-icon>
-                            </div>
-    
-                            <img src="./assets/images/Myself.jpg" alt="E-Commerce Website" loading="lazy">
-                        </figure>
-    
-                        <h3 class="project-title">Syanda's TechBase app</h3>
-    
-                        <p class="project-category">Html</p>
-                        <p class="project-category">JavaScript</p>
-                        <p class="project-category">CSS</p>
-    
-                    </a>
-                </li>
-
-                <li class="project-item active" data-filter-item data-category="C#">
-                    <a href="https://xcodex12.github.io/Mr-X/" target="_blank">
-    
-                        <figure class="project-img">
-                            <div class="project-item-icon-box">
-                                <ion-icon name="eye-outline"></ion-icon>
-                            </div>
-    
-                            <img src="./assets/images/Mr.jpg" alt="E-Commerce Website" loading="lazy">
-                        </figure>
-    
-                        <h3 class="project-title">E-Commerce Website</h3>
-    
-                        <p class="project-category">C#</p>
-                        <p class="project-category">JavaScript</p>
-                        <p class="project-category">SQL</p>
-                        <p class="project-category">CSS</p>
-    
-                    </a>
-                </li>
-
-                <li class="project-item active" data-filter-item data-category="Java">
-                    <a href="https://xcodex12.github.io/GenV/" target="_blank">
-    
-                        <figure class="project-img">
-                            <div class="project-item-icon-box">
-                                <ion-icon name="eye-outline"></ion-icon>
-                            </div>
-    
-                            <img src="./assets/images/Gen-V.jpg" alt="Pizza App" loading="lazy">
-                        </figure>
-    
-                        <h3 class="project-title">Gen-V App</h3>
-    
-                        <p class="project-category">Html</p>
-                        <p class="project-category">CSS</p>
-                        <p class="project-category">Firebase</p>
-                        <p class="project-category">JavaScript</p>
-    
-                    </a>
-                </li>
-
-              <li class="project-item active" data-filter-item data-category="C#">
-                    <a href="https://xcodex12.github.io/Practice/" target="_blank">
-    
-                        <figure class="project-img">
-                            <div class="project-item-icon-box">
-                                <ion-icon name="eye-outline"></ion-icon>
-                            </div>
-    
-                            <img src="./assets/images/Myself.jpg" alt="E-Commerce Website" loading="lazy">
-                        </figure>
-    
-                        <h3 class="project-title">Portfolio practice</h3>
-    
-                        <p class="project-category">Html</p>
-                        <p class="project-category">JavaScript</p>
-                        <p class="project-category">CSS</p>
-    
-                    </a>
-                </li>
-
-                <li class="project-item active" data-filter-item data-category="Java">
-                    <a href="https://github.com/Siyanda16-gif/Pizza-App.git" target="_blank">
-    
-                        <figure class="project-img">
-                            <div class="project-item-icon-box">
-                                <ion-icon name="eye-outline"></ion-icon>
-                            </div>
-    
-                            <img src="./assets/images/Project3.jpg" alt="Pizza App" loading="lazy">
-                        </figure>
-    
-                        <h3 class="project-title">Pizza App</h3>
-    
-                        <p class="project-category">Java</p>
-                        <p class="project-category">SQL</p>
-                        <p class="project-category">JavaScript</p>
-    
-                    </a>
-                </li>
-
-                <li class="project-item active" data-filter-item data-category="Java">
-                    <a href="https://xcodex12.github.io/secure-tracker/" target="_blank">
-    
-                        <figure class="project-img">
-                            <div class="project-item-icon-box">
-                                <ion-icon name="eye-outline"></ion-icon>
-                            </div>
-    
-                            <img src="./assets/images/tracker.jpg" alt="Pizza App" loading="lazy">
-                        </figure>
-    
-                        <h3 class="project-title">Tracker App</h3>
-    
-                        <p class="project-category">Html</p>
-                        <p class="project-category">CSS</p>
-                        <p class="project-category">Firebase</p>
-                        <p class="project-category">JavaScript</p>
-    
-                    </a>
-                </li>
-
-                <li class="project-item active" data-filter-item data-category="C#">
-                    <a href="https://xcodex12.github.io/Chess/" target="_blank">
-    
-                        <figure class="project-img">
-                            <div class="project-item-icon-box">
-                                <ion-icon name="eye-outline"></ion-icon>
-                            </div>
-    
-                            <img src="./assets/images/Chess.jpg" alt="E-Commerce Website" loading="lazy">
-                        </figure>
-    
-                        <h3 class="project-title">ChessBoard Game</h3>
-    
-                        <p class="project-category">Html</p>
-                        <p class="project-category">JavaScript</p>
-                        <p class="project-category">CSS</p>
-                        
-                    </a>
-                </li>
-    
-                <li class="project-item active" data-filter-item data-category="C#">
-                    <a href="https://github.com/Siyanda16-gif/FutureInfinity" target="_blank">
-    
-                        <figure class="project-img">
-                            <div class="project-item-icon-box">
-                                <ion-icon name="eye-outline"></ion-icon>
-                            </div>
-    
-                            
-                        </figure>
-    
-                        <h3 class="project-title">Mechanics Shop app</h3>
-    
-                        <p class="project-category">C#</p>
-                        <p class="project-category">JavaScript</p>
-                        <p class="project-category">Html</p>
-                        <p class="project-category">CSS</p>
-    
-                    </a>
-                </li>
-
-              <li class="project-item active" data-filter-item data-category="C#">
-                    <a href="https://github.com/Siyanda16-gif/Gym-Company-website" target="_blank">
-    
-                        <figure class="project-img">
-                            <div class="project-item-icon-box">
-                                <ion-icon name="eye-outline"></ion-icon>
-                            </div>
-    
-                            
-                        </figure>
-    
-                        <h3 class="project-title">Gym company app</h3>
-    
-                        <p class="project-category">C#</p>
-                        <p class="project-category">JavaScript</p>
-                        <p class="project-category">Html</p>
-                        <p class="project-category">CSS</p>
-    
-                    </a>
-                </li>
-              
-
-            </ul>
-    
+          <div id="project-filters" class="filter-chips" role="tablist" aria-label="Filter projects"></div>
+          <ul class="project-list" id="project-list"></ul>
         </section>
-    
-    </article>
-
-
-
-
-
-      <!--
-        - #BLOG
-      -->
-
-      <article class="blog" data-page="blog">
-
-        
-        </section>
-
       </article>
 
-
-
-
-
-      <!--
-        - #CONTACT
-      -->
-
+      <!-- #CONTACT -->
       <article class="contact" data-page="contact">
-
-        <header>
-          <h2 class="h2 article-title">Contact</h2>
-        </header>
+        <header><h2 class="h2 article-title">Contact</h2></header>
 
         <section class="mapbox" data-mapbox>
           <figure>
-              <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.257228794739!2d30.39183131531759!3d-29.85755568197126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef7a9bf6a300b39%3A0xab6a8c9c10a53c9e!2s82%20Diakonia%20Ave%2C%20Durban%20Central%2C%20Durban%2C%204001!5e0!3m2!1sen!2sza!4v1631234567890!5m2!1sen!2sza"
-                  width="400" height="300" loading="lazy" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            <iframe title="Map of Durban" src="https://www.google.com/maps?q=Durban,KwaZulu-Natal&output=embed" width="400" height="300" loading="lazy" style="border:0;" allowfullscreen></iframe>
           </figure>
-      </section>
-
-        <section class="contact-form">
-
-          <h3 class="h3 form-title">Contact Form</h3>
-
-          <form action="#" class="form" data-form>
-
-            <div class="input-wrapper">
-              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
-
-              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
-            </div>
-
-            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
-
-            <button class="form-btn" type="submit" disabled data-form-btn>
-              <ion-icon name="paper-plane"></ion-icon>
-              <span>Send Message</span>
-            </button>
-
-          </form>
-
         </section>
 
+        <section class="contact-form">
+          <h3 class="h3 form-title">Contact Form</h3>
+          <form action="#" class="form" data-form>
+            <div class="input-wrapper">
+              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+            </div>
+            <textarea name="message" class="form-input" placeholder="Your message" required data-form-input></textarea>
+            <button class="form-btn" type="submit" disabled data-form-btn>
+              <ion-icon name="paper-plane"></ion-icon><span>Send Message</span>
+            </button>
+          </form>
+        </section>
       </article>
 
     </div>
-
   </main>
 
-
-
-
-
-
-  <!--
-    - custom js link
-  -->
+  <script src="./assets/js/data.js"></script>
   <script src="./assets/js/script.js"></script>
-
-  <!--
-    - ionicon link
-  -->
+  <script src="./assets/js/chatbot.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
-<!-- Existing full site HTML preserved -->
-<!-- Appending chatbot UI and logic only -->
-
-<!-- Existing full site HTML preserved -->
-<!-- Appending chatbot UI and logic only -->
-
-<script>
-  // Chatbot toggle button
-  const botButton = document.createElement('button');
-  botButton.id = 'chatbot-btn';
-  botButton.textContent = '💬';
-  Object.assign(botButton.style, {
-    position: 'fixed', bottom: '20px', right: '20px', zIndex: 9999,
-    border: 'none', borderRadius: '50%', width: '60px', height: '60px',
-    fontSize: '24px', cursor: 'pointer', backgroundColor: '#000', color: '#ffd700',
-    boxShadow: '0 4px 12px rgba(0,0,0,0.2)', transition: 'background 0.3s ease'
-  });
-  document.body.appendChild(botButton);
-
-  const botWindow = document.createElement('div');
-  botWindow.id = 'chatbot-window';
-  Object.assign(botWindow.style, {
-    display: 'none', position: 'fixed', bottom: '90px', right: '20px', zIndex: 9999,
-    width: '300px', height: '400px', backgroundColor: '#000', color: '#ffd700',
-    borderRadius: '10px', boxShadow: '0 0 15px rgba(0,0,0,0.2)', overflow: 'hidden',
-    fontFamily: 'Poppins, sans-serif', fontSize: '14px', border: '1px solid #ffd700'
-  });
-  botWindow.innerHTML = `
-    <div style="background:#ffd700;color:#000;padding:10px;font-weight:bold;text-align:center;border-bottom:1px solid #444">Chat with Siyanda's Bot</div>
-    <div id="chatbot-messages" style="padding:10px; height:300px; overflow-y:auto; display:flex; flex-direction:column; gap:8px;">
-      <div style="display:flex; justify-content:flex-start;">
-        <div style="background:#333; color:#ffd700; padding:8px 12px; border-radius:12px; max-width:80%;">
-          <strong>Bot:</strong> Hey there! I'm Siyanda's assistant. Ask me about specific projects, skills, or just chat! 😊
-        </div>
-      </div>
-    </div>
-    <div style="display:flex;border-top:1px solid #444; padding:10px;">
-      <input id="chatbot-input" type="text" placeholder="Type your message..." style="flex:1;padding:8px;border:1px solid #ffd700;background:#222;color:#ffd700;border-radius:20px;margin-right:8px;">
-      <button onclick="sendBotMessage()" style="padding:8px 15px;background:#ffd700;color:#000;border:none;border-radius:20px;cursor:pointer">Send</button>
-    </div>`;
-  document.body.appendChild(botWindow);
-
-  botButton.onclick = () => {
-    botWindow.style.display = botWindow.style.display === 'none' ? 'block' : 'none';
-    document.getElementById('chatbot-input').focus();
-  };
-
-  // Enter key support
-  document.getElementById('chatbot-input').addEventListener('keypress', function(e) {
-    if (e.key === 'Enter') {
-      sendBotMessage();
-    }
-  });
-
-  // Project database with skills mapping
-  const projects = [
-    {
-      name: "Pizza App",
-      description: "A complete pizza ordering application built with Java and Android Studio",
-      skills: ["Java", "Android Studio", "SQL", "Mobile Development"],
-      technologies: ["Java", "SQL", "Android Studio"],
-      category: "Java",
-      link: "https://github.com/Siyanda16-gif/Pizza-App.git",
-      type: "Mobile App"
-    },
-    {
-      name: "Mr-X E-Commerce",
-      description: "Full-featured e-commerce website with shopping cart and payment integration",
-      skills: ["C#", "JavaScript", "SQL", "Web Development"],
-      technologies: ["C#", "JavaScript", "SQL", "CSS"],
-      category: "C#",
-      link: "https://xcodex12.github.io/Mr-X/",
-      type: "Web Application"
-    },
-    {
-      name: "ChessBoard Game",
-      description: "Interactive chess game with multiplayer functionality",
-      skills: ["JavaScript", "HTML", "CSS", "Game Development"],
-      technologies: ["HTML", "JavaScript", "CSS"],
-      category: "JavaScript",
-      link: "https://xcodex12.github.io/Chess/",
-      type: "Web Game"
-    },
-    {
-      name: "Gen-V App",
-      description: "Modern web application with Firebase integration",
-      skills: ["HTML", "CSS", "Firebase", "JavaScript"],
-      technologies: ["HTML", "CSS", "Firebase", "JavaScript"],
-      category: "JavaScript",
-      link: "https://xcodex12.github.io/GenV/",
-      type: "Web Application"
-    },
-    {
-      name: "Tracker App",
-      description: "Secure tracking application with real-time updates",
-      skills: ["HTML", "CSS", "Firebase", "JavaScript"],
-      technologies: ["HTML", "CSS", "Firebase", "JavaScript"],
-      category: "JavaScript",
-      link: "https://xcodex12.github.io/secure-tracker/",
-      type: "Web Application"
-    },
-    {
-      name: "Mechanics Shop App",
-      description: "Automotive shop management system",
-      skills: ["C#", "JavaScript", "HTML", "CSS"],
-      technologies: ["C#", "JavaScript", "HTML", "CSS"],
-      category: "C#",
-      link: "https://github.com/Siyanda16-gif/FutureInfinity",
-      type: "Web Application"
-    },
-    {
-      name: "Gym Company App",
-      description: "Fitness center management platform",
-      skills: ["C#", "JavaScript", "HTML", "CSS"],
-      technologies: ["C#", "JavaScript", "HTML", "CSS"],
-      category: "C#",
-      link: "https://github.com/Siyanda16-gif/Gym-Company-website",
-      type: "Web Application"
-    },
-    {
-      name: "TechBase App",
-      description: "Technology showcase and portfolio website",
-      skills: ["HTML", "JavaScript", "CSS", "Web Design"],
-      technologies: ["HTML", "JavaScript", "CSS"],
-      category: "JavaScript",
-      link: "https://xcodex12.github.io/TechBase/",
-      type: "Portfolio Website"
-    }
-  ];
-
-  const chatbotData = {
-    name: "Siyanda Xaba",
-    email: "siyandaxaba1@gmail.com",
-    phone: "0664428931",
-    location: "Durban, South Africa",
-    education: "I have completed my qualification in Application Development at Durban University of Technology",
-    skills: ["C#", "Java", "JavaScript", "HTML", "CSS", "SQL", "Azure", "Web Development", "Mobile App Development", "Database Management"],
-    experience: "Full-stack developer specializing in web apps, mobile apps, and cloud deployment using Microsoft Azure",
-    status: "I have completed my studies and am now a professional software developer"
-  };
-
-  function sendBotMessage() {
-    const input = document.getElementById('chatbot-input');
-    const userMsg = input.value.trim();
-    if (!userMsg) return;
-    
-    const chatbox = document.getElementById('chatbot-messages');
-    
-    // Add user message
-    const userDiv = document.createElement('div');
-    userDiv.style.display = 'flex';
-    userDiv.style.justifyContent = 'flex-end';
-    userDiv.innerHTML = `<div style="background:#ffd700;color:#000;padding:8px 12px;border-radius:12px;max-width:80%"><strong>You:</strong> ${userMsg}</div>`;
-    chatbox.appendChild(userDiv);
-    
-    input.value = '';
-    chatbox.scrollTop = chatbox.scrollHeight;
-
-    // Bot typing indicator
-    const typingDiv = document.createElement('div');
-    typingDiv.style.display = 'flex';
-    typingDiv.style.justifyContent = 'flex-start';
-    typingDiv.innerHTML = `<div style="background:#333;color:#ffd700;padding:8px 12px;border-radius:12px"><em>Bot is typing...</em></div>`;
-    chatbox.appendChild(typingDiv);
-    chatbox.scrollTop = chatbox.scrollHeight;
-
-    // Simulate typing delay
-    setTimeout(() => {
-      chatbox.removeChild(typingDiv);
-      const reply = getBotReply(userMsg);
-      const botDiv = document.createElement('div');
-      botDiv.style.display = 'flex';
-      botDiv.style.justifyContent = 'flex-start';
-      botDiv.innerHTML = `<div style="background:#333;color:#ffd700;padding:8px 12px;border-radius:12px;max-width:80%"><strong>Bot:</strong> ${reply}</div>`;
-      chatbox.appendChild(botDiv);
-      chatbox.scrollTop = chatbox.scrollHeight;
-    }, 1000);
-  }
-
-  function getBotReply(msg) {
-    const lowerMsg = msg.toLowerCase();
-    
-    // Handle spelling variations and fuzzy matching
-    const normalizedMsg = lowerMsg
-      .replace(/[^\w\s]/g, '') // Remove punctuation
-      .replace(/\s+/g, ' ')    // Normalize spaces
-      .trim();
-
-    // Greetings and casual conversation
-    if (containsAny(normalizedMsg, ['hi', 'hello', 'hey', 'sup', 'yo', 'hola'])) {
-      return getRandomResponse([
-        "Hello there! 👋 Ask me about Siyanda's specific projects or skills!",
-        "Hey! Want to see some cool projects Siyanda built?",
-        "Hi! I can show you Siyanda's projects for each programming language!",
-        "Hello! Ask me about Java, C#, JavaScript projects or any specific app! 😄"
-      ]);
-    }
-
-    if (containsAny(normalizedMsg, ['how are you', 'how you', 'how r u', 'how u doing'])) {
-      return getRandomResponse([
-        "I'm doing great! Ready to show you Siyanda's awesome projects. How about you?",
-        "I'm fantastic! Excited to tell you about specific projects. How are you doing?",
-        "Doing well! I can link skills to actual projects if you're interested!"
-      ]);
-    }
-
-    // Specific project inquiries
-    if (containsAny(normalizedMsg, ['pizza', 'pizzeria', 'pizza app'])) {
-      const pizzaProject = projects.find(p => p.name.toLowerCase().includes('pizza'));
-      return `🍕 <strong>Pizza App:</strong> ${pizzaProject.description}<br><br>
-              <strong>Technologies:</strong> ${pizzaProject.technologies.join(', ')}<br>
-              <strong>Type:</strong> ${pizzaProject.type}<br>
-              <a href="${pizzaProject.link}" target="_blank" style="color:#ffd700; text-decoration:underline">View Project →</a>`;
-    }
-
-    if (containsAny(normalizedMsg, ['chess', 'chessboard', 'game'])) {
-      const chessProject = projects.find(p => p.name.toLowerCase().includes('chess'));
-      return `♟️ <strong>ChessBoard Game:</strong> ${chessProject.description}<br><br>
-              <strong>Technologies:</strong> ${chessProject.technologies.join(', ')}<br>
-              <strong>Type:</strong> ${chessProject.type}<br>
-              <a href="${chessProject.link}" target="_blank" style="color:#ffd700; text-decoration:underline">Play Game →</a>`;
-    }
-
-    if (containsAny(normalizedMsg, ['ecommerce', 'e-commerce', 'shop', 'store', 'mr x'])) {
-      const ecommerceProject = projects.find(p => p.name.toLowerCase().includes('e-commerce') || p.name.includes('Mr-X'));
-      return `🛒 <strong>${ecommerceProject.name}:</strong> ${ecommerceProject.description}<br><br>
-              <strong>Technologies:</strong> ${ecommerceProject.technologies.join(', ')}<br>
-              <strong>Type:</strong> ${ecommerceProject.type}<br>
-              <a href="${ecommerceProject.link}" target="_blank" style="color:#ffd700; text-decoration:underline">View Store →</a>`;
-    }
-
-    // Skills with project examples
-    if (containsAny(normalizedMsg, ['java', 'android'])) {
-      const javaProjects = projects.filter(p => p.skills.includes('Java') || p.technologies.includes('Java'));
-      let response = `☕ <strong>Java/Android Skills:</strong> Siyanda is proficient in Java and Android Studio development.<br><br>`;
-      response += `<strong>Java Projects:</strong><br>`;
-      javaProjects.forEach(project => {
-        response += `• ${project.name}: ${project.description}<br>`;
-        response += `  <a href="${project.link}" target="_blank" style="color:#ffd700; text-decoration:underline">View Project</a><br><br>`;
-      });
-      return response;
-    }
-
-    if (containsAny(normalizedMsg, ['c#', 'c sharp'])) {
-      const csharpProjects = projects.filter(p => p.skills.includes('C#') || p.technologies.includes('C#'));
-      let response = `🔷 <strong>C# Skills:</strong> Siyanda builds robust applications with C#.<br><br>`;
-      response += `<strong>C# Projects:</strong><br>`;
-      csharpProjects.forEach(project => {
-        response += `• ${project.name}: ${project.description}<br>`;
-        response += `  <a href="${project.link}" target="_blank" style="color:#ffd700; text-decoration:underline">View Project</a><br><br>`;
-      });
-      return response;
-    }
-
-    if (containsAny(normalizedMsg, ['javascript', 'js'])) {
-      const jsProjects = projects.filter(p => p.skills.includes('JavaScript') || p.technologies.includes('JavaScript'));
-      let response = `🟨 <strong>JavaScript Skills:</strong> Siyanda creates dynamic web applications with JavaScript.<br><br>`;
-      response += `<strong>JavaScript Projects:</strong><br>`;
-      jsProjects.forEach(project => {
-        response += `• ${project.name}: ${project.description}<br>`;
-        response += `  <a href="${project.link}" target="_blank" style="color:#ffd700; text-decoration:underline">View Project</a><br><br>`;
-      });
-      return response;
-    }
-
-    if (containsAny(normalizedMsg, ['sql', 'database'])) {
-      const sqlProjects = projects.filter(p => p.skills.includes('SQL') || p.technologies.includes('SQL'));
-      let response = `🗄️ <strong>SQL/Database Skills:</strong> Siyanda manages databases using SQL Server.<br><br>`;
-      response += `<strong>Projects with SQL:</strong><br>`;
-      sqlProjects.forEach(project => {
-        response += `• ${project.name}: ${project.description}<br>`;
-        response += `  <a href="${project.link}" target="_blank" style="color:#ffd700; text-decoration:underline">View Project</a><br><br>`;
-      });
-      return response;
-    }
-
-    // General skills query
-    if (containsAny(normalizedMsg, ['skill', 'what can you do', 'programming', 'language', 'tech'])) {
-      return `💼 <strong>Siyanda's Skills:</strong> ${chatbotData.skills.join(', ')}<br><br>
-              <strong>Ask about specific skills to see projects!</strong><br>
-              Try: "Show me Java projects" or "What C# apps have you built?"`;
-    }
-
-    // Project list
-    if (containsAny(normalizedMsg, ['project', 'app', 'website', 'build', 'create', 'show project', 'all project'])) {
-      let response = `🚀 <strong>Siyanda's Projects:</strong><br><br>`;
-      projects.forEach(project => {
-        response += `• <strong>${project.name}</strong> (${project.type})<br>`;
-        response += `  ${project.description}<br>`;
-        response += `  <a href="${project.link}" target="_blank" style="color:#ffd700; text-decoration:underline">View Project</a><br><br>`;
-      });
-      return response;
-    }
-
-    if (containsAny(normalizedMsg, ['experience', 'work', 'job', 'professional'])) {
-      return chatbotData.experience + ". " + chatbotData.status;
-    }
-
-    if (containsAny(normalizedMsg, ['education', 'study', 'student', 'graduate', 'qualification', 'school', 'university'])) {
-      return chatbotData.education + ". " + chatbotData.status + " He's now focused on building amazing software solutions.";
-    }
-
-    if (containsAny(normalizedMsg, ['contact', 'email', 'phone', 'number', 'reach', 'get in touch'])) {
-      return `📞 <strong>Contact Siyanda:</strong><br>
-              📧 Email: ${chatbotData.email}<br>
-              📱 Phone: ${chatbotData.phone}<br>
-              📍 Location: ${chatbotData.location}`;
-    }
-
-    if (containsAny(normalizedMsg, ['bye', 'goodbye', 'see you', 'later', 'exit', 'quit'])) {
-      return getRandomResponse([
-        "Thanks for chatting! Check out Siyanda's projects above! ",
-        "It was great showing you the projects! Goodbye!",
-        "See you later! Don't forget to explore the projects I mentioned! "
-      ]);
-    }
-
-    if (containsAny(normalizedMsg, ['thank', 'thanks', 'appreciate'])) {
-      return getRandomResponse([
-        "You're welcome! Hope you liked the projects! ",
-        "No problem! Want to see more specific projects?",
-        "Anytime! Which project interested you the most?"
-      ]);
-    }
-
-    // Default response
-    return getRandomResponse([
-      "I can show you specific projects! Try asking about:<br>• 'Java projects'<br>• 'Pizza app'<br>• 'C# applications'<br>• 'All projects'",
-      "Want to see Siyanda's work? Ask about specific technologies like Java, C#, JavaScript, or specific apps like the Pizza App!",
-      "I'd love to show you projects! Ask me about:<br>• Specific skills (Java, C#, etc.)<br>• Project types (games, e-commerce)<br>• Or say 'show all projects'"
-    ]);
-  }
-
-  // Helper functions
-  function containsAny(text, keywords) {
-    return keywords.some(keyword => text.includes(keyword));
-  }
-
-  function getRandomResponse(responses) {
-    return responses[Math.floor(Math.random() * responses.length)];
-  }
-</script>
-<!-- End chatbot UI -->
-
 </body>
 
 </html>
